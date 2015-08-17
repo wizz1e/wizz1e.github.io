@@ -136,6 +136,7 @@ em {
 
 blockquote {
     font-size: 17px;
+    font-style: italic;
     padding: 0 24px;
     margin: 0 0 24px 0;
     border-left: 3px solid #e17b3f;
@@ -144,6 +145,7 @@ blockquote {
 @media (min-width: 768px) {
     blockquote {
         font-size: 21px;
+        font-style: italic;
         border-left: 6px solid #e17b3f;
     }
 }
