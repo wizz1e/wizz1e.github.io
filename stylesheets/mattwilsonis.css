@@ -580,6 +580,11 @@ article {
     border-bottom: none;
 }
 
+.read-more {
+    display: none;
+}
+
+
 .site-pagination {
     color: #333333;
     text-align: center;
