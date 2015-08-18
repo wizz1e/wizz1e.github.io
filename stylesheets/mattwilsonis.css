@@ -580,6 +580,9 @@ article {
     border-bottom: none;
 }
 
+.post-excerpt {
+}
+
 .read-more {
     display: none;
 }
