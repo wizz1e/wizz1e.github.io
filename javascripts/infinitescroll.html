@@ -1,0 +1,48 @@
+<body ng-app="myApp">
+    <div ng-controller="myCtrl" id="myCtrl" infinite-scroll="#" id="myDiv" style="overflow:auto; height:300px;">
+        <table style="width:100%;" >
+            <tr ng-repeat="d in myData | limitTo: myLimit">
+                <td>{{d.Name}}</td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+                <td>
+                    <input style="width:50px;" ng-model="d.Data" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="12" style="text-align:center;">
+                    <image src='urbansoftware.co.uk/images/loading32.gif' ng-show="myLimit < myData.length" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
