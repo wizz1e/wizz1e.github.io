@@ -534,26 +534,31 @@ article {
 .post-meta {
     color: #999999;
     font-size: 12px;
+    display: none;
     margin-bottom: 24px;
 }
 
 .post-meta a {
     color: #999999;
+    display: none;
     border-bottom: none;
 }
 
 .post-meta a:hover,
 .post-meta a:focus {
     color: #999999;
+    display: none;
 }
 
 .post-title {
     margin-bottom: 6px;
+    display: none;
 }
 
 .tag-title {
     font-family: 'menlo','andale mono','courier new',sans-serif;
     font-weight: 500;
+    display: none;
     margin-bottom: 48px;
 }
 
@@ -565,11 +570,13 @@ article {
 
 .post-title a {
     color: #333333;
+    display: none;
     border-bottom: none;
 }
 
 .post-title a:hover {
     color: #333333;
+    display: none;
     border-bottom: none;
 }
 
