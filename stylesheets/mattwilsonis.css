@@ -552,7 +552,6 @@ article {
 
 .post-title {
     margin-bottom: 6px;
-    display: none;
 }
 
 .tag-title {
@@ -570,13 +569,11 @@ article {
 
 .post-title a {
     color: #333333;
-    display: none;
     border-bottom: none;
 }
 
 .post-title a:hover {
     color: #333333;
-    display: none;
     border-bottom: none;
 }
 
