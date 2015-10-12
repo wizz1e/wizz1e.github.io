@@ -1,20 +1,20 @@
-//###
+//
 //jQuery Infinite Pages v0.2.0
 //https://github.com/magoosh/jquery-infinite-pages
 
 //Released under the MIT License
-//###
+//
 
-//#
-//# Built with a class-based template for jQuery plugins in Coffeescript:
-//# https://gist.github.com/rjz/3610858
-//#
+//
+// Built with a class-based template for jQuery plugins in Coffeescript:
+// https://gist.github.com/rjz/3610858
+//
 
 (($, window) ->
-  # Define the plugin class
+  // Define the plugin class
   class InfinitePages
 
-    # Default settings
+    // Default settings
     defaults:
       debug: false  // set to true to log messages to the console
       navSelector: 'a[rel=next]'
