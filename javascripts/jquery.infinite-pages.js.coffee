@@ -1,14 +1,14 @@
-###
-jQuery Infinite Pages v0.2.0
-https://github.com/magoosh/jquery-infinite-pages
+//###
+//jQuery Infinite Pages v0.2.0
+//https://github.com/magoosh/jquery-infinite-pages
 
-Released under the MIT License
-###
+//Released under the MIT License
+//###
 
-#
-# Built with a class-based template for jQuery plugins in Coffeescript:
-# https://gist.github.com/rjz/3610858
-#
+//#
+//# Built with a class-based template for jQuery plugins in Coffeescript:
+//# https://gist.github.com/rjz/3610858
+//#
 
 (($, window) ->
   # Define the plugin class
@@ -16,20 +16,20 @@ Released under the MIT License
 
     # Default settings
     defaults:
-      debug: false  # set to true to log messages to the console
+      debug: false  // set to true to log messages to the console
       navSelector: 'a[rel=next]'
-      buffer: 1000  # 1000px buffer by default
-      loading: null # optional callback when next-page request begins
-      success: null # optional callback when next-page request finishes
-      error:   null # optional callback when next-page request fails
-      context: window # context to define the scrolling container
+      buffer: 1000  // 1000px buffer by default
+      loading: null // optional callback when next-page request begins
+      success: null // optional callback when next-page request finishes
+      error:   null // optional callback when next-page request fails
+      context: window // context to define the scrolling container
       state:
         paused:  false
         loading: false
 
-    # Constructs the new InfinitePages object
-    #
-    # container - the element containing the infinite table and pagination links
+    // Constructs the new InfinitePages object
+    //
+    // container - the element containing the infinite table and pagination links
     constructor: (container, options) ->
       @options = $.extend({}, @defaults, options)
       @$container = $(container)
@@ -37,10 +37,10 @@ Released under the MIT License
       @$context = $(@options.context)
       @init()
 
-    # Setup and bind to related events
+    // Setup and bind to related events
     init: ->
 
-      # Debounce scroll event to improve performance
+      // Debounce scroll event to improve performance
       scrollTimeout = null
       scrollHandler = (=> @check())
 
@@ -50,12 +50,12 @@ Released under the MIT License
           scrollTimeout = null
         scrollTimeout = setTimeout(scrollHandler, 250)
 
-    # Internal helper for logging messages
+    // Internal helper for logging messages
     _log: (msg) ->
       console?.log(msg) if @options.debug
 
-    # Check the distance of the nav selector from the bottom of the window and fire
-    # load event if close enough
+    // Check the distance of the nav selector from the bottom of the window and fire
+    // load event if close enough
     check: ->
       nav = @$container.find(@options.navSelector)
       if nav.size() == 0
@@ -71,9 +71,9 @@ Released under the MIT License
         else if (distance > @options.buffer)
           @_log "#{distance - @options.buffer}px remaining..."
         else
-          @next() # load the next page
+          @next() // load the next page
 
-    # Load the next page
+    // Load the next page
     next: ->
       if @options.state.done
         @_log "Loaded all pages"
@@ -102,18 +102,18 @@ Released under the MIT License
       if typeof @options.error is 'function'
         @$container.find(@options.navSelector).each(@options.error)
 
-    # Pause firing of events on scroll
+    // Pause firing of events on scroll
     pause: ->
       @options.state.paused = true
       @_log "Scroll checks paused"
 
-    # Resume firing of events on scroll
+    // Resume firing of events on scroll
     resume: ->
       @options.state.paused = false
       @_log "Scroll checks resumed"
       @check()
 
-  # Define the plugin
+  // Define the plugin
   $.fn.extend infinitePages: (option, args...) ->
     @each ->
       $this = $(this)
