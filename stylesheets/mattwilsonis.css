@@ -587,11 +587,10 @@ article {
 }
 
 
-.read-more a:hover,a:focus{
+.read-more a:hover,
+.read-more a:focus {
     color: #999999;
-    border-bottom: none;
 }
-
 
 .site-pagination {
     color: #333333;
