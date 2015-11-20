@@ -582,7 +582,7 @@ article {
 }
 
 .read-more a:hover,a:focus {
-    color: #333333;
+    color: #999999;
     border-bottom: none;
     text-decoration: none;
 }
