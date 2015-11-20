@@ -581,7 +581,7 @@ article {
 .post-excerpt {
 }
 
-.read-more a {
+a.read-more {
     border-bottom: none;
 }
 
