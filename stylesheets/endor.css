@@ -2360,6 +2360,8 @@
     content: ""
 }
 
+
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -2427,8 +2429,8 @@ h1, .container > .post-list:first-of-type > .load-wrapper:first-of-type .post-li
 }
 
 mark {
-    background: #ff0;
-    color: #000
+    background: #000;
+    color: #fff
 }
 
 small, h6, .h6, .site-description, .post-date, .tags-title, .site-footer {
@@ -2591,8 +2593,8 @@ body {
     font-family: "Oxygen", sans-serif;
     font-size: 1rem;
     line-height: 1.66;
-    color: #999997;
-    background-color: #000
+    color: #000;
+    background-color: #fff
 }
 
 h1, .container > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h5,
@@ -5209,7 +5211,7 @@ fieldset[disabled] .btn-pinterest:hover {
     background-image: -webkit-linear-gradient(top, #0077b5 0%, #006396 100%);
     background-image: linear-gradient(to bottom, #0077b5 0%, #006396 100%);
     background-repeat: repeat-x;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FF0077B5', endColorstr='#FF006396', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff077B5', endColorstr='#fff06396', GradientType=0);
     border: none;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1)
 }
@@ -6439,7 +6441,7 @@ pre {
 .post-title-single .site-title .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h1,
 .site-title .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title .post-title-single h1 {
     margin-bottom: 0.25rem;
-    background: -webkit-linear-gradient(#EBCB63, #E2B848);
+    background: -webkit-linear-gradient(#000000, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
     -moz-background-clip: text;
