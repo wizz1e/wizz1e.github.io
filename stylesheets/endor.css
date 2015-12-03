@@ -2674,7 +2674,7 @@ blockquote {
 
 a {
     font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
-    color: #E6C260;
+    color: #000;
     text-decoration: none
 }
 
@@ -2779,7 +2779,7 @@ h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-weight: 700;
     line-height: 1.25;
-    color: #999997;
+    color: #000;
     margin-bottom: 1rem
 }
 
@@ -2881,6 +2881,7 @@ h5, .site-title h1, .site-title .container > .post-list:first-of-type > .load-wr
 .site-title .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h5,
 .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title .site-title h5,
 .h5 {
+    font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-size: 1rem;
     font-weight: 400
 }
