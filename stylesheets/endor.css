@@ -2369,7 +2369,11 @@ html {
 }
 
 body {
-    margin: 0
+    font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #333333;
+    margin: 0;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
