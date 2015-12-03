@@ -2363,7 +2363,7 @@
 
 
 html {
-    font-family: sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -2594,7 +2594,7 @@ html {
 }
 
 body {
-    font-family: "Oxygen", sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-size: 1rem;
     line-height: 1.66;
     color: #000;
@@ -2774,7 +2774,7 @@ h2, .site-navigation a, h3, h4, h5, .site-title h1, .site-title .container > .po
 .site-title .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h5,
 .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title .site-title h5,
 h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-weight: 700;
     line-height: 1.25;
     color: #999997;
@@ -3013,7 +3013,7 @@ blockquote {
     padding: 0.5rem 1rem;
     margin: 2rem 0;
     font-size: 1rem;
-    font-family: "Oxygen", sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-weight: 400;
     border-left: 2px solid #E6C260;
     background: rgba(153, 153, 151, 0.1)
@@ -4798,7 +4798,7 @@ fieldset[disabled] .checkbox label {
 
 .btn {
     display: inline-block;
-    font-family: "Oxygen", sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-weight: 700;
     text-align: center;
     white-space: nowrap;
@@ -6416,7 +6416,7 @@ pre {
 .site-navigation a {
     color: #fff;
     display: block;
-    font-family: "Montserrat", sans-serif;
+    font-family: font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     padding: 0.5rem 0;
     margin: 0
 }
