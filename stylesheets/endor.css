@@ -2673,12 +2673,13 @@ blockquote {
 }
 
 a {
+    font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     color: #E6C260;
     text-decoration: none
 }
 
 a:focus, a:hover {
-    color: rgba(230, 194, 96, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     text-decoration: none
 }
 
