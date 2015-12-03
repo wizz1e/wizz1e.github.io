@@ -156,7 +156,6 @@ blockquote ol:last-child {
     margin-bottom: 0;
 }
 
-
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -397,7 +396,6 @@ img.emoji {
 	margin: 0 0 24px 0;
 }
 
-
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -528,6 +526,16 @@ header {
 
 article {
     margin-bottom: 48px;
+}
+
+/* Improve scaling and positioning of article images */
+article .content img {
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -991,5 +999,3 @@ footer a {
 footer a:hover {
     color: #999999;
 }
-
-
