@@ -2428,6 +2428,7 @@ h1, .container > .post-list:first-of-type > .load-wrapper:first-of-type .post-li
 .site-title .site-description .site-description__inner > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h1,
 .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title .site-title h1,
 .site-title .post-footer > .post-list:first-of-type > .load-wrapper:first-of-type .post-list__item:first-of-type .post-title h1 {
+    font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
     font-size: 2em;
     margin: 0.67em 0
 }
