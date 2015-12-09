@@ -11,31 +11,33 @@
     </div>
   {% endif %}
 
-  <div id="post-list" class="row">
+  <div class="row">
     <div class="main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-      {% for post in posts %}
-        <article>
-          <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-          <div class="post-excerpt">
-            {{ post.excerpt }}
-            <a href="{{ post.url }}" class="read-more">Read more</a>
-          </div>
-          <div class="post-meta">
-            <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
-            {{ post.tags|tags(last_separator=' and ', prefix=' in ', suffix='.') }}
-          </div>
-        </article>
-      {% else %}
-        <p>No posts</p>
-      {% endfor %}
+	    <div class="post-list">
+		{% for post in posts %}
+        	<article>
+			<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<div class="post-excerpt">
+            	{{ post.excerpt }}
+				<a href="{{ post.url }}" class="read-more">Read more</a>
+          	</div>
+		  	<div class="post-meta">
+            	<time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
+				{{ post.tags|tags(last_separator=' and ', prefix=' in ', suffix='.') }}
+          	</div>
+        	</article>
+			{% else %}
+			<p>No posts</p>
+			{% endfor %}
 
-      {% if pagination.has_pages %}
-      <nav class="site-pagination">
-          {% if pagination.has_next %}
-              <a href="{{ pagination.next }}" ></a>
-          {% endif %}
-      </nav>
-      {% endif %}
-    </div>
+			{% if pagination.has_pages %}
+			<nav class="site-pagination">
+			{% if pagination.has_next %}
+              	<a href="{{ pagination.next }}" ></a>
+			  	{% endif %}
+      	</nav>
+	  	{% endif %}
+    	</div>
+  	</div>
   </div>
 {% endblock content %}
