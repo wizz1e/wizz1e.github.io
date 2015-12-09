@@ -32,7 +32,7 @@ $(function() {
 $('content').infinitescroll({
 		navSelector  	: ".site-pagination",
 		nextSelector 	: ".site-pagination a",
-		itemSelector 	: "content p",
+		itemSelector 	: "article",
 		debug		 	: true,
 		dataType	 	: 'html',
 		})
