@@ -31,7 +31,7 @@ $(function() {
   $('.post-list').infintescroll({
 	  nextSelector: ".site-pagination a",
 	  navSelector: ".site-pagination",
-	  itemSelector: ".post"
+	  itemSelector: ".post-excerpt"
   })
 
 });
