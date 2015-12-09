@@ -31,37 +31,9 @@
 
       {% if pagination.has_pages %}
       <nav class="site-pagination">
-        <ul class="pagination">
-          {% if pagination.has_prev %}
-            <li>
-              <a href="{{ pagination.prev }}" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-          {% else %}
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-          {% endif %}
-
-          <li><a>Page {{ pagination.page_number }} of {{ pagination.pages_count }}</a></li>
-
           {% if pagination.has_next %}
-            <li>
-              <a href="{{ pagination.next }}" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          {% else %}
-            <li>
-              <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
+              <a href="{{ pagination.next }}" ></a>
           {% endif %}
-        </ul>
       </nav>
       {% endif %}
     </div>
