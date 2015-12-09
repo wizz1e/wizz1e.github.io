@@ -28,10 +28,12 @@ $(function() {
   $.bigfoot();
   
   // Infinite Scrolling
-  $('.post-list').infintescroll({
-	  nextSelector: ".site-pagination a",
-	  navSelector: ".site-pagination",
-	  itemSelector: ".article"
-  })
 
+$('#content').infinitescroll({
+		navSelector  	: ".site-pagination",
+		nextSelector 	: ".site-pagination a",
+		itemSelector 	: "#content p",
+		debug		 	: true,
+		dataType	 	: 'html',
+		})
 });
