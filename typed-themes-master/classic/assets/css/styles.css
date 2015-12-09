@@ -528,6 +528,7 @@ article {
 .post-meta {
     color: #999999;
     font-size: 12px;
+    margin-bottom: 24px;
 }
 
 .post-meta a {
@@ -541,7 +542,7 @@ article {
 }
 
 .post-title {
-    margin-bottom: 24px;
+    margin-bottom: 6px;
 }
 
 .tag-title {
