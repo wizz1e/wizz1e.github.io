@@ -26,5 +26,12 @@ $(function() {
   // Bigfoot
 
   $.bigfoot();
+  
+  // Infinite Scrolling
+  $('.YOURPOSTLISTSELECTOR').infintescroll({
+	  nextSelector: ".site-pagination a",
+	  navSelector: ".site-pagination",
+	  itemSelector: ".YOURSINGLEPOSTSELECTOR"
+  })
 
 });
