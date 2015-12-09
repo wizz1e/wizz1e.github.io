@@ -29,10 +29,10 @@ $(function() {
   
   // Infinite Scrolling
 
-$('#content').infinitescroll({
+$('content').infinitescroll({
 		navSelector  	: ".site-pagination",
 		nextSelector 	: ".site-pagination a",
-		itemSelector 	: "#content p",
+		itemSelector 	: "content p",
 		debug		 	: true,
 		dataType	 	: 'html',
 		})
