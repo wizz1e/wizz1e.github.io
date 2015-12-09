@@ -28,7 +28,7 @@ $(function() {
   $.bigfoot();
   
   // Infinite Scrolling
-  $('.post-list').infintescroll({
+  $('.content').infintescroll({
 	  nextSelector: ".site-pagination a",
 	  navSelector: ".site-pagination",
 	  itemSelector: ".article"
