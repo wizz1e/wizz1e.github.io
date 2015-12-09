@@ -29,7 +29,7 @@ $(function() {
   
   // Infinite Scrolling
 
-$('post-list').infinitescroll({
+$('.post-list').infinitescroll({
 		navSelector  	: ".site-pagination",
 		nextSelector 	: ".site-pagination a",
 		itemSelector 	: "article",
