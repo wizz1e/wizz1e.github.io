@@ -31,7 +31,7 @@ $(function() {
 
 #content .container
 
-$('#content .container').infinitescroll({
+$('content .container').infinitescroll({
   nextSelector: ".site-pagination a",
   navSelector: ".site-pagination",
   itemSelector: ".article"
