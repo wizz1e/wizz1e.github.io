@@ -528,7 +528,6 @@ article {
 .post-meta {
     color: #999999;
     font-size: 12px;
-    margin-bottom: 24px;
 }
 
 .post-meta a {
@@ -573,7 +572,7 @@ article {
 a.read-more {
     color: #999999;
     border-bottom: none;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 
