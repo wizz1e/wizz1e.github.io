@@ -384,7 +384,11 @@ img.emoji {
 }
 
 .fluidvids {
-	margin: 0 0 0px 0;
+	margin: 0 0 24px 0;
+}
+
+.video-wrapper {
+	margin: 0 0 24px 0;
 }
 
 /* Header
