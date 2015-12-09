@@ -29,11 +29,9 @@ $(function() {
   
   // Infinite Scrolling
 
-$('content').infinitescroll({
+$('post-list').infinitescroll({
 		navSelector  	: ".site-pagination",
 		nextSelector 	: ".site-pagination a",
 		itemSelector 	: "article",
-		debug		 	: true,
-		dataType	 	: 'html',
 		})
 });
