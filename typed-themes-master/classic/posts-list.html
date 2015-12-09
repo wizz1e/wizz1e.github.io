@@ -16,28 +16,28 @@
 		{% for post in posts %}
         	<article>
 			<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			<div class="post-excerpt">
-            	{{ post.excerpt }}
-				<a href="{{ post.url }}" class="read-more">Read more</a>
-          	</div>
-		  	<div class="post-meta">
+			<div class="post-meta">
             	<time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
 				{{ post.tags|tags(last_separator=' and ', prefix=' in ', suffix='.') }}
           	</div>
-        	</article>
+		  	<div class="post-excerpt">
+            	{{ post.excerpt }}
+				<a href="{{ post.url }}" class="read-more">Read more</a>
+          	</div>
+		  	</article>
 			{% else %}
 			<p>No posts</p>
 			{% endfor %}
 
-			{% if pagination.has_pages %}
+		{% if pagination.has_pages %}
 			<nav class="site-pagination">
-			{% if pagination.has_next %}
-              	<a href="{{ pagination.next }}" ></a>
+				{% if pagination.has_next %}
+              		<a href="{{ pagination.next }}" ></a>
 			  	{% endif %}
-      	</nav>
+      		</nav>
 	  	{% endif %}
-    	</div>
+    		</div>
+  			</div>
   	</div>
-  </div>
   </div>
 {% endblock content %}
