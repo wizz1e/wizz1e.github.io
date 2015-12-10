@@ -9,12 +9,15 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
   var $ = window.jQuery
   var Waypoint = window.Waypoint
+  var infinite = new Waypoint.Infinite({
+	  element: $('.infinite-container')[0]
+  })
 
   /* http://imakewebthings.com/waypoints/shortcuts/infinite-scroll */
   function Infinite(options) {
     this.options = $.extend({}, Infinite.defaults, options)
     this.container = this.options.element
-    if (this.options.container !== '.infinite-container') {
+    if (this.options.container !== 'auto') {
       this.container = this.options.container
     }
     this.$container = $(this.container)
@@ -70,7 +73,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   }
 
   Infinite.defaults = {
-    container: '.infinite-container',
+    container: 'auto',
     items: '.infinite-item',
     more: '.Next',
     offset: 'bottom-in-view',
