@@ -14,7 +14,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   function Infinite(options) {
     this.options = $.extend({}, Infinite.defaults, options)
     this.container = this.options.element
-    if (this.options.container !== 'main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2') {
+    if (this.options.container !== 'auto') {
       this.container = this.options.container
     }
     this.$container = $(this.container)
@@ -70,9 +70,9 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   }
 
   Infinite.defaults = {
-    container: 'main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2',
+    container: 'auto',
     items: '.article',
-    more: 'href="{{ pagination.next }}"',
+    more: '.site-pagination a',
     offset: 'bottom-in-view',
     loadingClass: 'infinite-loading',
     onBeforePageLoad: $.noop,
