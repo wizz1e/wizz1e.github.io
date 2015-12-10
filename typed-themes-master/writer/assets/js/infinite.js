@@ -71,7 +71,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
   Infinite.defaults = {
     container: 'auto',
-    items: '.article',
+    items: '#article.post',
     more: '.site-pagination',
     offset: 'bottom-in-view',
     loadingClass: 'infinite-loading',
