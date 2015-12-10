@@ -51,8 +51,10 @@
     {% include 'partials/header.html' %}
 
     <div id="content" class="container">
-      {% block content %}
-      {% endblock content %}
+	  <div class="infinite-container">
+        {% block content %}
+        {% endblock content %}
+      </div>
     </div>
     
 
@@ -63,6 +65,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
     <script src="{% asset 'js/jquery.bigfoot.js' %}"></script>
     <script src="{% asset 'js/main.js' %}"></script>
+    <script src="{% asset 'js/jquery.waypoints.js' %}"></script>
+    <script src="{% asset 'js/infinite.js' %}"></script>
     {{ site.code_body }}
   </body>
 </html>
