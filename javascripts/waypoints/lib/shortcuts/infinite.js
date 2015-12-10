@@ -71,8 +71,8 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
   Infinite.defaults = {
     container: 'auto',
-    items: '.infinite-item',
-    more: '.infinite-more-link',
+    items: '.article',
+    more: '[aria-label="Next"]',
     offset: 'bottom-in-view',
     loadingClass: 'infinite-loading',
     onBeforePageLoad: $.noop,
