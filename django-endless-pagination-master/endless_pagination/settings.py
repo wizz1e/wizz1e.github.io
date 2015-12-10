@@ -4,6 +4,11 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
+
 
 # How many objects are normally displayed in a page
 # (overwriteable by templatetag).
