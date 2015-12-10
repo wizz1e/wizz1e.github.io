@@ -70,7 +70,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   }
 
   Infinite.defaults = {
-    container: '#content,.container',
+    container: 'auto',
     items: '.article',
     more: '[aria-label="Next"]',
     offset: 'bottom-in-view',
