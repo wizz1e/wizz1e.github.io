@@ -14,7 +14,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   function Infinite(options) {
     this.options = $.extend({}, Infinite.defaults, options)
     this.container = this.options.element
-    if (this.options.container !== 'auto') {
+    if (this.options.container !== '.infinite-container') {
       this.container = this.options.container
     }
     this.$container = $(this.container)
@@ -70,7 +70,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   }
 
   Infinite.defaults = {
-    container: 'auto',
+    container: '.infinite-container',
     items: '.infinite-item',
     more: '.Next',
     offset: 'bottom-in-view',
