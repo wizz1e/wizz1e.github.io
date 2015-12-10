@@ -10,8 +10,8 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   var $ = window.jQuery
   var Waypoint = window.Waypoint
   var infinite = new Waypoint.Infinite({
-	  element: $('.infinite-container')[0]
-  })
+  element: $('.infinite-container')[0]
+})
 
   /* http://imakewebthings.com/waypoints/shortcuts/infinite-scroll */
   function Infinite(options) {
