@@ -14,7 +14,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   function Infinite(options) {
     this.options = $.extend({}, Infinite.defaults, options)
     this.container = this.options.element
-    if (this.options.container !== 'auto') {
+    if (this.options.container !== 'main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2') {
       this.container = this.options.container
     }
     this.$container = $(this.container)
