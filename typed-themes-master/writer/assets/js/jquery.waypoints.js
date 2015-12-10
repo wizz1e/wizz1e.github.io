@@ -9,9 +9,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
   var keyCounter = 0
   var allWaypoints = {}
-  var infinite = new Waypoint.Infinite({
-  element: $('.infinite-container')[0]
-})
 
   /* http://imakewebthings.com/waypoints/api/waypoint */
   function Waypoint(options) {
