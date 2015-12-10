@@ -72,7 +72,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   Infinite.defaults = {
     container: 'main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2',
     items: '.article',
-    more: '<a href="{{ pagination.next }}" ></a>',
+    more: 'href="{{ pagination.next }}"',
     offset: 'bottom-in-view',
     loadingClass: 'infinite-loading',
     onBeforePageLoad: $.noop,
