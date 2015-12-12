@@ -32,13 +32,12 @@
 			{% endfor %}
 
 		{% if pagination.has_pages %}
-			<div class="Next">
 			<nav class="site-pagination">
-				{% if pagination.has_next %}
-              		<a href="{{ pagination.next }}"></a>
-			  	{% endif %}
+			  {% if pagination.has_next %}
+              	<a href="{{ pagination.next }}"></a>
+			  {% endif %}
       		</nav>
-			</div>
+			
 	  	{% endif %}
     		</div>
   			</div>
