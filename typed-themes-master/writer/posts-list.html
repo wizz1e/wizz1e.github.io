@@ -13,10 +13,7 @@
 
   
     <div class="main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-		<div class="infinite-container">
-		{% for post in posts %}
-		<div class="infinite-item">
-        	<article>
+		{% for post in posts %}        	<article>
 			<h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			<div class="post-meta">
             	<time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
@@ -25,7 +22,6 @@
 		  	<div class="post-excerpt">
             	{{ post.excerpt }}
 				<a href="{{ post.url }}" class="read-more">Read more</a>
-          	</div>
 		  	</article>
 			{% else %}
 			<p>No posts</p>
@@ -40,7 +36,6 @@
 			
 	  	{% endif %}
     		</div>
-  			</div>
        </div>	
   	</div>
   </div>
