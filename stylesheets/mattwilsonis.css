@@ -926,7 +926,7 @@ a.read-more :focus {
     background: #fafafa;
     border-radius: 0.5em;
     font-smoothing: subpixel-antialiased;
-    line-height: normal;
+    line-height: 1.55;
 }
 
 .bigfoot-footnote__content img {
