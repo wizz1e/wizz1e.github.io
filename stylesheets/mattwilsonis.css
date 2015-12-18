@@ -114,6 +114,8 @@ h5, .h5 {
 h6, .h6 {
     font-size: 12px;
     font-weight: 500;
+    font-style: italic;
+    color: #999999;
 }
 
 @media (min-width: 768px) {
