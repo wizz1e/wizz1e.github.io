@@ -676,23 +676,65 @@ a.read-more :focus {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .marquee {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	
+.marquee p {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0 0 24px 0;
 	color: #999999;
     font-size: 12px;
     padding: 0 24px;
-    margin: 0 0 24px 0;
     border-left: 1px solid #545454;
+	text-align: left;
+/* Starting position */
+ -moz-transform:translateY(100%);
+ -webkit-transform:translateY(100%);	
+ transform:translateY(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example3 15s linear infinite;
+ -webkit-animation: example3 15s linear infinite;
+ animation: example3 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example3 {
+ 0%   { -moz-transform: translateY(100%); }
+ 100% { -moz-transform: translateY(-100%); }
+}
+@-webkit-keyframes example3 {
+ 0%   { -webkit-transform: translateY(100%); }
+ 100% { -webkit-transform: translateY(-100%); }
+}
+@keyframes example3 {
+ 0%   { 
+ -moz-transform: translateY(100%); /* Firefox bug fix */
+ -webkit-transform: translateY(100%); /* Firefox bug fix */
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(-100%); /* Firefox bug fix */
+ -webkit-transform: translateY(-100%); /* Firefox bug fix */
+ transform: translateY(-100%); 
+ }
+}
+	
+/*	
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
 	-webkit-marquee-speed: normal;
 	-webkit-marquee-style: scroll;
-	text-align: left;
 }
+*/
 
 .marquee:hover {
 	-webkit-animation-play-state: paused;
 	animation-play-state: paused;
+
 }
 
 @media (min-width: 768px) {
