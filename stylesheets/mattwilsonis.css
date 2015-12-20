@@ -674,13 +674,9 @@ a.read-more :focus {
 
 /* Marquee
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.marquee {
-	height: 200px;
-	overflow: hidden;
-	position: relative;
 	
-.marquee p {
+	
+.marquee {
 	position: absolute;
 	width: 100%;
 	height: 100%;
