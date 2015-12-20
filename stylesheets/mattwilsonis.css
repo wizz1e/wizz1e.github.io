@@ -682,7 +682,7 @@ a.read-more :focus {
     margin: 0 0 24px 0;
     border-left: 1px solid #545454;
 	overflow-x: -webkit-marquee;
-	overflow: auto;
+	overflow: hidden;
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
