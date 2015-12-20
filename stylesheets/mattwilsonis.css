@@ -675,7 +675,7 @@ a.read-more :focus {
 .marquee {
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
-	-webkit-marquee-increment: large;
+	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
 	-webkit-marquee-speed: slow;
 	-webkit-marquee-style: scroll;
