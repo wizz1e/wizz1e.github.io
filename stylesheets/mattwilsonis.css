@@ -680,7 +680,7 @@ a.read-more :focus {
     font-size: 12px;
     padding: 0 24px;
     margin: 0 0 24px 0;
-    border-left: 1px solid #555555;
+    border-left: 1px solid #545454;
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
