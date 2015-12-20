@@ -674,7 +674,7 @@ a.read-more :focus {
 
 /* Marquee
 –––––––––––––––––––––––––––––––––––––––––––––––––– */	
-.marquee-container {
+#marquee-container {
 	height: 400px;
 	overflow: hidden;
 	position: relative;
@@ -695,20 +695,20 @@ a.read-more :focus {
  -webkit-transform:translateY(100%);	
  transform:translateY(100%);
  /* Apply animation to this element */	
- -moz-animation: example3 15s linear infinite;
- -webkit-animation: example3 15s linear infinite;
- animation: example3 15s linear infinite;
+ -moz-animation: marquee 30s linear infinite;
+ -webkit-animation: marquee 15s linear infinite;
+ animation: marquee 15s linear infinite;
 }
 /* Move it (define the animation) */
-@-moz-keyframes example3 {
+@-moz-keyframes marquee {
  0%   { -moz-transform: translateY(100%); }
  100% { -moz-transform: translateY(-100%); }
 }
-@-webkit-keyframes example3 {
+@-webkit-keyframes marquee {
  0%   { -webkit-transform: translateY(100%); }
  100% { -webkit-transform: translateY(-100%); }
 }
-@keyframes example3 {
+@keyframes marquee {
  0%   { 
  -moz-transform: translateY(100%); /* Firefox bug fix */
  -webkit-transform: translateY(100%); /* Firefox bug fix */
