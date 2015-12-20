@@ -194,6 +194,14 @@ h1 sub
 	animation: scroll 100s linear 4s infinite;
 }
 
+#titlecontent:hover {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
 
 /* Animation 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
