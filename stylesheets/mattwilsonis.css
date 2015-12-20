@@ -673,8 +673,12 @@ a.read-more :focus {
 }
 
 .marquee {
-	-webkit-marquee: up medium infinite scroll normal;
 	overflow-x: -webkit-marquee;
+	-webkit-marquee-direction: ahead;
+	-webkit-marquee-increment: large;
+	-webkit-marquee-repetition: infinite;
+	-webkit-marquee-speed: slow;
+	-webkit-marquee-style: scroll;
 	text-align: center;
 }
 
