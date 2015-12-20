@@ -680,7 +680,7 @@ a.read-more :focus {
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
-	-webkit-marquee-speed: normal;
+	-webkit-marquee-speed: slow;
 	-webkit-marquee-style: scroll;
 }
 
