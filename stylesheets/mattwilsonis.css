@@ -691,6 +691,9 @@ a.read-more :focus {
 /* Star Wars Titles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Move to seperate CSS 
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
 * { padding: 0; margin: 0; }
@@ -813,7 +816,7 @@ h1 sub
 	100% { transform: scale(0.1); opacity: 0; }
 }
 
-/* the interesting 3D scrolling stuff */
+/* the interesting 3D scrolling stuff 
 #titles
 {
 	position: absolute;
@@ -881,7 +884,7 @@ h1 sub
 	animation: scroll 100s linear 4s infinite;
 }
 
-/* animation */
+/* animation 
 @-webkit-keyframes scroll {
 	0% { top: 100%; }
 	100% { top: -170%; }
@@ -906,6 +909,9 @@ h1 sub
 	0% { top: 100%; }
 	100% { top: -170%; }
 }
+
+/* End of Star Wars CSS -- Move this
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 
 
