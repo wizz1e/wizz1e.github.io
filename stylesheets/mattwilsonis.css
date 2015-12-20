@@ -672,6 +672,12 @@ a.read-more :focus {
     margin-right: auto;
 }
 
+.marquee {
+	-webkit-marquee: up medium infinite scroll normal;
+	overflow-x: -webkit-marquee;
+	text-align: center;
+}
+
 /* Bigfoot
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
