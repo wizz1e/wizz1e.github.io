@@ -675,7 +675,8 @@ a.read-more :focus {
 /* Marquee
 –––––––––––––––––––––––––––––––––––––––––––––––––– */	
 #marquee-container {
-	height: 400px;
+	height: 200px;
+	width: 100%;
 	overflow: hidden;
 	position: relative;
 }
