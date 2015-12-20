@@ -676,6 +676,11 @@ a.read-more :focus {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .marquee {
+	color: #999999;
+    font-size: 12px;
+    padding: 0 24px;
+    margin: 0 0 24px 0;
+    border-left: 1px solid #333333;
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
@@ -690,26 +695,12 @@ a.read-more :focus {
 	animation-play-state: paused;
 }
 
-.marquee-blockquote {
-	color: #999999;
-    font-size: 12px;
-    padding: 0 24px;
-    margin: 0 0 24px 0;
-    border-left: 1px solid #333333;
-}
-
 @media (min-width: 768px) {
     .marquee- {
         color: #999999;
         font-size: 12px;
         border-left: 1px solid #333333;
     }
-}
-
-.marquee-blockquote p:last-child,
-.marquee-blockquote ul:last-child,
-.marquee-blockquote ol:last-child {
-    margin-bottom: 0;
 }
 
 
