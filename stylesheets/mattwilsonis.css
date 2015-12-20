@@ -696,9 +696,9 @@ a.read-more :focus {
  -webkit-transform:translateY(100%);	
  transform:translateY(100%);
  /* Apply animation to this element */	
- -moz-animation: marquee 30s linear infinite;
- -webkit-animation: marquee 15s linear infinite;
- animation: marquee 15s linear infinite;
+ -moz-animation: marquee -1 linear infinite;
+ -webkit-animation: marquee -1 linear infinite;
+ animation: marquee -1 linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes marquee {
