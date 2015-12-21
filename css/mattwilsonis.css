@@ -609,10 +609,10 @@ a.read-more :focus {
 }
 
 .separator {
-	border-bottom: solid 2px;
+	border-bottom: solid 1px;
 	width: 100%;
 	text-align: center;
-	color: #999999;
+	color: #ededed;
 	margin-bottom: 24px;
 	margin-top: 24px;
 }
@@ -716,7 +716,7 @@ a.read-more :focus {
 	color: #999999;
     font-size: 12px;
     padding: 0 24px;
-    border-left: 1px solid #666666;
+    border-left: 1px solid #ededed;
 	text-align: left;
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
