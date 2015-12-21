@@ -692,16 +692,16 @@ a.read-more :focus {
     padding: 0 24px;
     border-left: 1px solid #545454;
 	text-align: left;
-}
-	
-.marquee-article {
-	
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
 	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
 	-webkit-marquee-speed: normal;
 	-webkit-marquee-style: scroll;
+}
+	
+.marquee-article {
+	
 }	
 	
 @media (min-width: 768px) {
