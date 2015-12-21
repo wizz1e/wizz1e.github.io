@@ -691,7 +691,7 @@ a.read-more :focus {
     padding: 0 24px;
     border-left: 1px solid #545454;
 	text-align: left;
-	
+	/*
 	/* Hey browser, use your GPU */
    	-webkit-transform: translate3d(0, 0, 0);	
    	/* Starting position */
@@ -704,28 +704,9 @@ a.read-more :focus {
  	animation: marquee 20s linear infinite;
  }
 
- 	/* Move it (define the animation) */
- 	@-moz-keyframes marquee {
- 	0%   { -moz-transform: translateY(100%); }
- 	100% { -moz-transform: translateY(-100%); }
-}
-	@-webkit-keyframes marquee {
-	0%   { -webkit-transform: translateY(100%); }
-	100% { -webkit-transform: translateY(-100%); }
-}
-	@keyframes marquee {
-	0%   { 
-	-moz-transform: translateY(100%); /* Firefox bug fix */
-	-webkit-transform: translateY(100%); /* Firefox bug fix */
-	transform: translateY(100%); 		
-}
-	100% { 
-	-moz-transform: translateY(-100%); /* Firefox bug fix */
-	-webkit-transform: translateY(-100%); /* Firefox bug fix */
-	transform: translateY(-100%); 
-}
-}
-	
+
+
+
 /*	
 	overflow-x: -webkit-marquee;
 	-webkit-marquee-direction: ahead;
