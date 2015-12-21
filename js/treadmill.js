@@ -14,7 +14,7 @@
     treadmillDown = function(obj, speed) {
                     setTimeout( function() {
                         if(running) {
-                            var elm = obj.find('.marquee').last();
+                            var elm = obj.find('.marquee-article').last();
                             var elm2 = elm.clone();
                             var height = elm.height();
                             elm2.css('top', -height + 'px');
@@ -36,7 +36,7 @@
     treadmillUp = function(obj, speed) {
                     setTimeout( function() {
                         if(running) {
-                            var elm = obj.find('.marquee').first();
+                            var elm = obj.find('.marquee-article').first();
                             var elm2 = elm.clone();
                             var height = elm.height();
                             elm.animate({
@@ -76,7 +76,7 @@
 
         // Sets the height of Super Treadmill to viewable times height of the first unit else it is set to user-defined css value
         if(settings.viewable <= $(this).children().length && settings.viewable != 0)
-            treadmillHeight = settings.viewable * $(this).find('.marquee').first().height();
+            treadmillHeight = settings.viewable * $(this).find('.marquee-article').first().height();
         else
             treadmillHeight = $(this).height();
 
