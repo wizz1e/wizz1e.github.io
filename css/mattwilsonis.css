@@ -705,7 +705,7 @@ a.read-more :focus {
 	-webkit-marquee-increment: small;
 	-webkit-marquee-repetition: infinite;
 	-webkit-marquee-style: scroll;
-	-webkit-marquee-speed: slow;
+	-webkit-marquee-speed: normal;
 }
 	
 .marquee-article {
