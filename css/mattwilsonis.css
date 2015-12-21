@@ -734,7 +734,7 @@ a.read-more :focus {
     .marquee- {
         color: #999999;
         font-size: 12px;
-        border-left: 1px solid #333333;
+        border-left: 1px solid #ededed;
     }
 }	
 
