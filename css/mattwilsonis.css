@@ -613,6 +613,7 @@ a.read-more :focus {
 	width: 100%;
 	text-align: center;
 	color: #999999;
+	margin-bottom: 24px;
 }
 
 .site-pagination {
