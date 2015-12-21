@@ -609,7 +609,8 @@ a.read-more :focus {
 }
 
 .separator {
-	border-bottom: 2px;
+	border-bottom: none;
+	text-align: center;
 	color: #999999;
 }
 
