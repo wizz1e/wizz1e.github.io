@@ -608,6 +608,11 @@ a.read-more :focus {
     color: #999999;
 }
 
+.separator {
+	border-bottom: 2px;
+	color: #999999;
+}
+
 .site-pagination {
     color: #333333;
     text-align: center;
