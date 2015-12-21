@@ -369,6 +369,10 @@ img {
     margin-bottom: 24px;
 }
 
+.img-circle {
+    border-radius: 50%;
+}
+
 iframe,
 object,
 embed {
