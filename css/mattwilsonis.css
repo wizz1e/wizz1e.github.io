@@ -676,10 +676,14 @@ a.read-more :focus {
     margin-right: auto;
 }
 
+.obit {
+	padding-top: 24px;
+}
+
 /* Marquee
 –––––––––––––––––––––––––––––––––––––––––––––––––– */	
 #marquee-container {
-	height: 200px;
+	height: 250px;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
