@@ -162,6 +162,7 @@ blockquote {
 }
 
 blockquote .small, blockquote footer, blockquote small {
+	font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
 	display: block;
 	font-size: 12px;
 	line-height: 1.4287143;
