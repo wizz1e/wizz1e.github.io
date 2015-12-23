@@ -1,4 +1,3 @@
-<script type="text/javascript">
 $(document).ready(function() {
 //Quotes rotator
 var divs = $('.cbp-qtcontent');
@@ -35,4 +34,3 @@ width:"800px",
 _startProgress()
 setTimeout(fade, 8000);
 });
-</script>
