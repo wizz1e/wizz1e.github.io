@@ -161,6 +161,13 @@ blockquote {
     }
 }
 
+blockquote .small, blockquote footer, blockquote small {
+	display: block;
+	font-size: 12px;
+	line-height: 1.4287143;
+	color: #999999
+}
+
 blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
@@ -717,17 +724,12 @@ a.read-more :focus {
     padding: 0 24px;
     border-left: 1px solid #ededed;
 	text-align: left;
-	/*overflow-x: -webkit-marquee;
-	-webkit-marquee-direction: ahead;
-	-webkit-marquee-increment: small;
-	-webkit-marquee-repetition: infinite;
-	-webkit-marquee-style: scroll;
-	-webkit-marquee-speed: normal;
-}*/
 	
 .marquee-article {
-	width: 100%;
 	
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }	
 	
 @media (min-width: 768px) {
@@ -737,10 +739,6 @@ a.read-more :focus {
         border-left: 1px solid #ededed;
     }
 }	
-
-
-
-
 
 
 /* Bigfoot
