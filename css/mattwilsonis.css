@@ -832,7 +832,7 @@ blockquote ol:last-child {
 
 .cbp-qtprogress {
 	position: absolute;
-	background: #999999;
+	background: #f1f1f1;
 	height: 1px;
 	width: 0%;
 	z-index: 1000
