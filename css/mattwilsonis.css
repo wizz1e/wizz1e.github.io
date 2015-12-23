@@ -806,7 +806,7 @@ a.read-more :focus {
 
 .cbp-qtprogress {
         position: absolute;
-        background: #999999;
+        background: #333333;
         height: 1px;
         width: 0%;
         z-index: 1000
