@@ -748,6 +748,37 @@ a.read-more :focus {
 
 /* Quote Rotator
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+	
+        
+    border-left: 1px solid #333333;
+}
+
+@media (min-width: 768px) {
+    blockquote {
+        color: #999999;
+        font-size: 12px;
+        border-left: 1px solid #333333;
+    }
+}
+
+blockquote .small, blockquote footer, blockquote small {
+	font-family: Menlo, "Andale Mono", "Courier New", sans-serif;
+	display: block;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.55;
+	color: #999999
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
 
 .cbp-qtrotator {
 	width: 800px;
@@ -774,14 +805,16 @@ a.read-more :focus {
 
 .cbp-qtrotator blockquote {
 	margin: 40px 0 0 0;
-	padding: 0
+	padding: 0 24px;
+	border-left: 2px solid #333333;
+
 }
 
 .cbp-qtrotator blockquote p {
 	font-size: 2em;
 	color: #888;
 	font-weight: 300;
-	margin: 0.4em 0 1em
+	margin: 0 0 24px 0;
 }
 
 .cbp-qtrotator blockquote footer {
@@ -796,9 +829,10 @@ a.read-more :focus {
 	float: right;
 	margin: 50px 0 0 50px
 }
-	.cbp-qtprogress {
+
+.cbp-qtprogress {
 	position: absolute;
-	background: #47a3da;
+	background: #999999;
 	height: 1px;
 	width: 0%;
 	z-index: 1000
