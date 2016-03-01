@@ -1,0 +1,17 @@
+<div class="site-header">
+  {% if site.logo %}
+    <h1 class="site-logo"><a href="/"><img src="{{ site.logo }}" alt="{{ site.title }}"></a></h1>
+  {% else %}
+    <h1 class="site-title"><a href="/">{{ site.title }}</a></h1>
+  {% endif %}
+
+  {% if site.navigation %}
+    <nav class="navigation">
+      <ul>
+        {% for navigation_item in site.navigation %}
+          <li><a href="{{ navigation_item.url }}" title="{{ navigation_item.title }}">{{ navigation_item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+</div>
