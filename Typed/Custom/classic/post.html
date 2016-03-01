@@ -1,0 +1,86 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+  {{ super() }}
+
+  {% if meta.title == '' %}
+    {{ post.published_at|date }} &middot; {{ site.title }}
+  {% else %}
+    {{ meta.title }} &middot; {{ site.title }}
+  {% endif %}
+{% endblock title %}
+
+{% block meta %}
+  {{ super() }}
+
+  <meta property="og:url" content="{{ post.url|absolute_url }}" />
+  <meta property="og:type" content="article"/>
+
+  {% if post.images %}
+  <meta name="twitter:image" content="{{ post.images[0].url }}">
+  {% for image in post.images %}
+  <meta property="og:image" content="{{ image.url }}" />
+  {% endfor %}
+  {% endif %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ meta.title }}",
+      "alternativeHeadline": "{{ meta.title }}",
+      {% if post.images %}
+        "image": [
+          "{{ post.images[0].url }}"
+        ],
+      {% endif %}
+      "datePublished": "{{ post.published_at|date(isoformat=True) }}",
+      "description": "{{ meta.description }}",
+      "articleBody": "{{ post.content|striptags|e }}"
+    }
+  </script>
+{% endblock meta %}
+
+{% block content %}
+  {{ super() }}
+
+  <div class="row">
+    <div class="main col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <article class="post">
+        {% if post.title %}
+          {% if post.linked_url %}
+            <h2 class="post-title">
+              <a href="{{ post.linked_url }}">{{ post.title }}</a>
+              <span class="link-char">→</span>
+            </h2>
+          {% else %}
+            <h1 class="post-title">{{ post.title }}</h1>
+          {% endif %}
+        {% endif %}
+
+        <div class="post-meta">
+          <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date }}</time>
+          {{ post.tags|tags(last_separator=' and ', prefix=' in ', suffix='.') }}
+        </div>
+
+        <div class="post-content">
+          {{ post.content }}
+        </div>
+
+        {{ site.code_post }}
+
+        {% for author in post.authors %}
+          <div class="row post-author">
+            <div class="col-xs-2 author-avatar">
+              <img src="{{ author.avatar }}">
+            </div>
+            <div class="col-xs-10 author-bio">
+              <h3>{{ author.name }}</h3>
+              {{ author.bio }}
+            </div>
+          </div>
+        {% endfor %}
+      </article>
+    </div>
+  </div>
+{% endblock content %}
