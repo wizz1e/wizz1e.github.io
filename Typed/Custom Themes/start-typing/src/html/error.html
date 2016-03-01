@@ -1,5 +1,4 @@
 {% extends 'partials/base.html' %}
-{% block bodyclass %}{{ super() }}class="error"{% endblock bodyclass %}
 
 {% block title %}
   {{ super() }}
@@ -17,6 +16,7 @@
       {{ error.message }}
     </div>
   </article>
+
 {% endblock content %}
 
 {% block pagejs %}

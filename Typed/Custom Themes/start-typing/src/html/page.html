@@ -1,5 +1,4 @@
 {% extends 'partials/base.html' %}
-{% block bodyclass %}{{ super() }}class="page"{% endblock bodyclass %}
 
 {% block title %}
   {{ super() }}
@@ -7,13 +6,17 @@
   {{ meta.title }} &middot; {{ site.title }}
 {% endblock title %}
 
-{% block postmeta %}
+{% block meta %}
   {{ super() }}
 
+    <meta property="og:url" content="{{ page.url|absolute_url }}" />
   {% if page.images %}
-  <meta name="twitter:image" content="{{ page.images[0].url }}">
-  <meta property="og:image" content="{{ page.images[0].url }}" />
+    <meta property="og:image" content="{{ page.images[0].url }}" />
+    <meta name="twitter:image" content="{{ page.images[0].url }}">
   {% endif %}
+
+
+
 
   <meta property="twitter:card" content="summary">
   <meta property="twitter:title" content="{{ meta.title }}">
@@ -25,18 +28,19 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ page.url|absolute_url }}" />
   <meta property="og:type" content="article">
-{% endblock postmeta %}
+{% endblock meta %}
 
 {% block content %}
   {{ super() }}
 
-  <article class="page">
-    <h1 class="page-title">{{ page.title }}</h1>
+  <article class="post">
+    <h1 class="post-title">{{ page.title }}</h1>
 
-    <div class="page-content">
+    <div class="content">
       {{ page.content }}
     </div>
   </article>
+
 {% endblock content %}
 
 {% block pagejs %}
@@ -46,3 +50,10 @@
      for this page.
   -->
 {% endblock pagejs %}
+
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 {% extends 'partials/base.html' %}
-{% block bodyclass %}{{ super() }}class="post"{% endblock bodyclass %}
 
 {% block title %}
   {{ super() }}
@@ -11,14 +10,19 @@
   {% endif %}
 {% endblock title %}
 
-{% block postmeta %}
+{% block meta %}
   {{ super() }}
+
+  <meta property="og:url" content="{{ post.url|absolute_url }}" />
+  <meta property="og:type" content="article"/>
 
   {% if post.images %}
   <meta name="twitter:image" content="{{ post.images[0].url }}">
-  <meta property="og:image" content="{{ post.images[0].url }}" />
+  {% for image in post.images %}
+  <meta property="og:image" content="{{ image.url }}" />
+  {% endfor %}
   {% endif %}
-
+  
   <meta property="twitter:card" content="summary">
   <meta property="twitter:title" content="{{ meta.title }}">
   <meta property="twitter:description" content="{{ meta.description }}">
@@ -31,52 +35,64 @@
   <meta property="og:type" content="article">
 
   <meta name="author" content="{{ post.authors|authors }}">
-{% endblock postmeta %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ meta.title }}",
+      "alternativeHeadline": "{{ meta.title }}",
+      {% if post.images %}
+        "image": [
+          "{{ post.images[0].url }}"
+        ],
+      {% endif %}
+      "datePublished": "{{ post.published_at|date(isoformat=True) }}",
+      "description": "{{ meta.description }}",
+      "articleBody": "{{ post.content|striptags|e }}"
+    }
+  </script>
+{% endblock meta %}
 
 {% block content %}
   {{ super() }}
 
-  <article class="article">
+  <article class="post post--single">
     {% if post.title %}
-      {% if post.linked_url %}        
-        <h1 class="article-title-linked">
+      {% if post.linked_url %}
+        <h2 class="post-title">
           <a href="{{ post.linked_url }}">{{ post.title }}</a>
-          <span class="link-char"><i class="fa fa-long-arrow-right"></i></span>
-        </h1>
+          <span class="link-char">→</span>
+        </h2>
       {% else %}
-        <h1 class="article-title">{{ post.title }}</h1>
+        <h1 class="post-title">{{ post.title }}</h1>
       {% endif %}
     {% endif %}
 
-    <span class="article-meta">
-      <time datetime="{{ post.published_at|date(isoformat=True) }}"> {{ post.published_at|date(format='%-d %b %Y') }}</time>
-      &nbsp; {{ post.tags|tags(separator=', #', last_separator=' & #', prefix=' #', suffix='') }}
-    </span>
-    
-    <div class="article-content">
-      {{ post.content }}
+    <div class="post-meta">
+      {{ post.authors|authors(last_separator=' and ', prefix='by ', suffix=' on ') }}
+      <time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date('%B %-d %Y') }}</time>
+      {{ post.tags|tags(last_separator=' and ', prefix=' in ') }}
     </div>
 
-    {{ site.code_post }}
-
-    <div class="authors">
-      {% for author in post.authors %}
-      <div class="author">
-        <img src="{{ author.avatar }}" alt="{{ author.name }}">
-        {{ author.name }}
-        {{ author.bio }}
-        <div class="social-icons">
-          {% if theme.variables.twitter_username %}
-            <a href="http://twitter.com/{{ theme.variables.twitter_username }}"><i class="fa fa-twitter fa-lg"></i></a>
-          {% endif %}
-          {% if theme.variables.facebook_url %}
-              <a href="{{ theme.variables.facebook_url }}"><i class="fa fa-facebook-official fa-lg"></i></a>  
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
+    <div class="content">
+      {{ post.content }}
+      {{ site.code_post }}
     </div>
   </article>
+
+  {% for author in post.authors %}
+    <footer class="post-footer">
+      <div class="author-avatar">
+        <img src="{{ author.avatar }}" alt="{{ author.name }}">
+      </div>
+      <div class="author-bio">
+        <h3>{{ author.name }}</h3>
+        {{ author.bio }}
+      </div>
+    </footer>
+  {% endfor %}
+
 {% endblock content %}
 
 {% block pagejs %}
