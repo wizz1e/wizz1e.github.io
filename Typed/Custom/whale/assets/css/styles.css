@@ -2784,8 +2784,9 @@ html {
 body {
   font-family: courier, monospace;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5;
-  color: #111111;
+  color: #111;
   background-color: #fff;
 }
 
@@ -2839,13 +2840,15 @@ blockquote {
 }
 
 a {
-  color: #999999;
+  color: #999;
   text-decoration: none;
+  border-bottom: 0.1rem solid #999;
 }
 
 a:focus, a:hover {
-  color: #000000;
+  color: #111;
   text-decoration: none;
+  border-bottom: none;
 }
 
 a:focus {
@@ -2931,9 +2934,9 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
-  color: #292E31;
+  color: #111;
 }
 
 h1, .h1,
@@ -2949,31 +2952,40 @@ h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 2.647rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #999;
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  color: #999;
 }
 
 h6, .h6 {
   font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #999;
 }
 
 .lead {
-  font-size: 1.294rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -3009,7 +3021,7 @@ hr::before {
   content: "* * *";
   position: relative;
   top: -10px;
-  color: #6F7C82;
+  color: #999;
   display: block;
   text-align: center;
 }
@@ -3064,11 +3076,12 @@ mark,
 
 blockquote,
 .blockquote {
+  color: #999;
   padding: 0 1.882rem;
   margin-bottom: 1.882rem;
   margin-left: -2.235rem;
   font-size: 1.25rem;
-  border-left: 0.353rem solid #00B7FF;
+  border-left: 0.125rem solid #111;
 }
 
 @media (max-width: 47.9em) {
@@ -3168,8 +3181,8 @@ samp {
 code {
   padding: .2rem .4rem;
   font-size: 90%;
-  color: #bd4147;
-  background-color: #f7f7f9;
+  color: #111;
+  background-color: #eee;
   border-radius: 0.25rem;
 }
 
@@ -3193,8 +3206,8 @@ pre {
   margin-bottom: 1.882rem;
   font-size: 90%;
   line-height: 1.5;
-  color: #bd4147;
-  background-color: #f7f7f9;
+  color: #111;
+  background-color: #eee;
   padding: 0.941rem;
   border-radius: 0.25rem;
 }
@@ -4159,19 +4172,16 @@ table td,
   padding: 0.75rem;
   line-height: 1.5;
   vertical-align: top;
-  border-top: 1px solid #DADBDB;
 }
 
 table thead th,
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 1px solid #DADBDB;
-  background: rgba(111, 124, 130, 0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 table tbody + tbody,
 .table tbody + tbody {
-  border-top: 1px solid #DADBDB;
   background: rgba(111, 124, 130, 0.04);
 }
 
@@ -4187,14 +4197,12 @@ table .table,
 
 table,
 .table-bordered {
-  border: 1px solid #DADBDB;
 }
 
 table th,
 table td,
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #DADBDB;
 }
 
 table thead th,
@@ -4360,13 +4368,13 @@ table thead td,
 .form-control, .site-search input {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 0rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #292E31;
+  color: #999;
   background-color: #fff;
   background-image: none;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #111;
   border-radius: 0.25rem;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -8706,37 +8714,43 @@ a {
    ------------------------------------
 */
 .site-header {
-  background: #FFFFFF;
+  background: #fff;
   padding: 1.882rem 0;
   margin-bottom: 5.646rem;
 }
 
 .site-header a {
-  color: #111111;
+  color: #111;
+  border-bottom: none;
 }
 
 .site-header a:focus, .site-header a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: #999;
 }
 
 .site-header .site-brand {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
   float: left;
   margin-bottom: 0;
+  margin-left: 0;
 }
 
 .site-description {
-  color: rgba(0, 0, 0, 0.8);
+  margin-top: 5.646rem;
+  text-align: center;
 }
 
-.site-description::before {
+/*.site-description::before {
   content: " ";
   width: 1.882rem;
   height: 1px;
   background: rgba(0, 0, 0, 0.3);
   display: block;
   margin: 0.941rem 0;
-}
+  text-align: center;
+}*/
 
 .site-description p {
   margin: 0;
@@ -8747,6 +8761,27 @@ a {
    Navigation
    ------------------------------------
 */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media (min-width: 48) {
+  .site-navigation {
+    border-radius: 0;
+  }
+}
+
 @media (min-width: 48em) {
   .site-header nav {
     float: right;
@@ -8785,6 +8820,9 @@ a {
 @media (max-width: 47.9em) {
   .site-brand {
     display: inline-block;
+    margin-left: 0;
+    font-weight: 800;
+    
   }
   .nav-collapse {
     width: 100%;
@@ -8829,7 +8867,7 @@ a {
     -o-user-select: none;
     user-select: none;
     float: right;
-    color: #fff;
+    color: #111;
   }
 }
 
@@ -8858,28 +8896,31 @@ a {
 }
 
 .entry-title a {
-  color: #111111;
+  color: #111;
+  border-bottom: 0.1rem solid #111;
 }
 
 .entry-title a:focus, .entry-title a:hover {
-  color: #999999;
+  color: #111;
 }
 
 .link-char {
-  color: #999999;
+  color: #111;
   margin-left: 0.941rem;
 }
 
 .entry-meta {
   margin-bottom: 1.882rem;
+  color: #999;
 }
 
 .entry-meta a {
-  color: #666666;
+  color: #999;
+  border-bottom: none;
 }
 
 .entry-meta a:focus, .entry-meta a:hover {
-  color: #999999;
+  color: #999;
 }
 
 .entry-meta .entry-time {
@@ -8903,7 +8944,7 @@ a {
 .entry-content ul,
 .entry-content ol,
 .entry-content hr::before {
-  font-size: 1.294rem;
+  font-size: 1rem;
 }
 
 .entry-content li {
@@ -9069,7 +9110,7 @@ a {
    ------------------------------------
 */
 .site-footer {
-  background: rgba(255, 255, 255, 0.04);
+  background: #fff;
   padding: 1.882rem 0;
   position: absolute;
   bottom: 0;
@@ -9079,7 +9120,7 @@ a {
 
 .footer-main {
   text-align: center;
-  color: rgba(111, 124, 130, 0.4);
+  color: #999;
 }
 
 .footer-main p {
@@ -9087,9 +9128,11 @@ a {
 }
 
 .footer-main a {
-  color: rgba(41, 46, 49, 0.4);
+  color: #999;
+  border-bottom: 0.1rem solid #999;
 }
 
 .footer-main a:focus, .footer-main a:hover {
-  color: #292E31;
+  color: #999;
+  border-bottom: none;
 }

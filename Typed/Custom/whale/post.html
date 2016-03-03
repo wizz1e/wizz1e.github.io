@@ -48,28 +48,29 @@
     <div class="entry-single">
       <article class="entry">
         <header class="entry-header">
-          {% if post.title %}
-            {% if post.linked_url %}
-              <h2 class="entry-title">
-                <a href="{{ post.linked_url }}">{{ post.title }}</a>
-                <span class="link-char">→</span>
-              </h2>
-            {% else %}
-              <h1>{{ post.title }}</h1>
+            {% if post.title %}
+              {% if post.linked_url %}
+                <h2 class="entry-title">
+                  <a href="{{ post.linked_url }}">{{ post.title }}</a>
+                  <span class="link-char">→</span>
+                </h2>
+              {% else %}
+                <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+              {% endif %}
             {% endif %}
-          {% endif %}
 
-          <p class="entry-meta">
-            <span class="entry-time">
-              <i class="fa fa-calendar-o"></i><time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date(format='%B %-d %Y at %-I:%M %p') }}</time>
-            </span>
-            {% if post.tags %}
-              <span class="entry-tags">
-                <i class="fa fa-tag"></i>{{ post.tags|tags(last_separator=' and ') }}
-              </span>
-            {% endif %}
-          </p>
-        </header>
+            <p class="entry-meta">
+              <a href="{{ post.url }}" rel="bookmark" class="entry-time">
+                <time datetime="{{ post.published_at|date(isoformat=True) }}"> {{ post.published_at|date(format='%-d %b %Y') }}</time>
+              </a>
+               
+              {% if post.tags %}
+                <span class="entry-tags">
+                  {{ post.tags|tags(separator=', #', last_separator=' & #', prefix=' #', suffix='') }}
+                </span>
+              {% endif %}
+            </p>
+          </header>
 
         <div class="entry-content">
           {{ post.content }}

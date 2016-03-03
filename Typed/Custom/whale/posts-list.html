@@ -39,11 +39,12 @@
 
             <p class="entry-meta">
               <a href="{{ post.url }}" rel="bookmark" class="entry-time">
-                <i class="fa fa-calendar-o"></i><time datetime="{{ post.published_at|date(isoformat=True) }}">{{ post.published_at|date(format='%B %-d %Y at %-I:%M %p') }}</time>
+                <time datetime="{{ post.published_at|date(isoformat=True) }}"> {{ post.published_at|date(format='%-d %b %Y') }}</time>
               </a>
+               
               {% if post.tags %}
                 <span class="entry-tags">
-                  <i class="fa fa-tag"></i>{{ post.tags|tags(last_separator=' and ') }}
+                  {{ post.tags|tags(separator=', #', last_separator=' & #', prefix=' #', suffix='') }}
                 </span>
               {% endif %}
             </p>
